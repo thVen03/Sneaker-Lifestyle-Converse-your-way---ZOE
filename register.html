@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo tài khoản - ZOE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="Images/favicon.webp" type="image/x-icon">
+</head>
+<body>
+    <header>
+		<div class="header__logo">
+			<a href="index.html"><img src="Images/logo.webp" alt=""></a>
+		</div>
+		<div class="header__nav">
+            <div class="header__nav--main">
+                <ul>
+                    <li class="js-close"><a href="#">THEO STYLE</a></li>
+                    <li class="js-close"><a href="#">BÔ SƯU TẬP <i class="fa-solid fa-chevron-down"></i>
+                        <ul class="sub-nav">
+                            <li><a href="#">BASIC <i class="fa-solid fa-chevron-right"></i></a>
+                                <ul class="sub-nav--">
+                                    <li><a href="#">MULE</a></li>
+                                    <li><a href="#">LOW TOP</a></li>
+                                    <li><a href="#">HIGH TOP</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">ESSENTIALS <i class="fa-solid fa-chevron-right"></i></a>
+                                <ul class="sub-nav--">
+                                    <li><a href="#">HUXLEY</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">ART</a></li>
+                            <li><a href="#">THỜI TRANG <i class="fa-solid fa-chevron-right"></i></a>
+                                <ul class="sub-nav--">
+                                    <li><a href="#">VALENTINE 2023</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">SALE</a></li>
+                            <li><a href="#">BLOG</a></li>
+                        </ul>
+                    </li>
+                    <li class="js-close"><a href="#">PHỤ KIỆN</a></li>
+                </ul>
+            </div>
+            <div class="search js-search"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <div class="search-inp">
+                    <input type="text" name="" id="" placeholder=" Tìm kiếm sản phẩm...">
+                </div>
+            </div>
+            <div class="user js-close"><a href="register.html"><i class="fa-regular fa-user"></i></a></div>
+            <div class="cart js-close"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
+		</div>
+    </header>
+    <div class="content js-close">
+        <h2 style="font-weight: lighter;">ĐĂNG KÝ</h2>
+        <form action="">
+            <input type="text" name="" id="" placeholder="Họ">
+            <input type="text" name="" id="" placeholder="Tên">
+            <input type="text" name="" id="" placeholder="Email">
+            <input type="password" name="" id="" placeholder="Mật khẩu">
+            <button><h3>ĐĂNG KÝ</h3></button>
+            <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Quay lại trang chủ</a>
+        </form>
+    </div>
+    <footer class="js-close">
+        <div class="footer__top">
+            <div class="footer__top--logo">
+                <a href="index.html"><img src="Images/logo.webp" alt=""></a>
+            </div>
+            <div class="footer__top--contact">
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="https://goo.gl/maps/F7sJvA3aCJf6zi326">ZOE - Sneakers & Craft</a>
+                </p>
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="https://goo.gl/maps/F7sJvA3aCJf6zi326">ZOE - Văn phòng</a>
+                </p>
+            </div>
+            <div class="footer__top--contact">
+                <p><i class="fa-solid fa-phone"></i> Điện thoại: 0969434712</p>
+            </div>
+            <div class="footer__top--contact">
+                <p><i class="fa-solid fa-envelope"></i> Email: thanhven16@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__bottom--payment">
+                <img src="Images/footer/footer_payment_img.webp" alt="" usemap="#workmap">
+                <map name="workmap">
+                    <area shape="circle" coords="0,20,50" href="https://www.facebook.com" alt="">
+                    <area shape="circle" coords="50,20,50" href="https://www.tiktok.com" alt="">
+                    <area shape="circle" coords="100,20,50" href="https://www.instagram.com" alt="">
+                </map>
+            </div>
+            <ul class="footer__bottom--menu">
+                <li><a href="">Giới thiệu</a></li>
+                <li><a href="">Hướng dẫn mua hàng</a></li>
+                <li><a href="">Chính sách giao nhận</a></li>
+                <li><a href="">Hình thức thanh toán</a></li>
+                <li><a href="">Chính sách Bảo hành - Đổi trả</a></li>
+                <li><a href="">Chính sách bảo mật</a></li>
+            </ul>
+            <div class="footer__bottom--wrap">
+                <p>Copyright © 2023 by 2001216309 - Nguyễn Thanh Vẹn</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const searchBtn = document.querySelector('.js-search')
+        const searchInp = document.querySelector('.search-inp')
+        const searchInpCloses = document.querySelectorAll('.js-close')
+        function showSearchInp(){
+            searchInp.classList.add('open')
+        }
+        function hideSearchInp(){
+            searchInp.classList.remove('open')
+        }
+        for (const searchInpClose of searchInpCloses){
+            searchInpClose.addEventListener('click', hideSearchInp)
+        }
+        searchBtn.addEventListener('click', showSearchInp)
+    </script>
+</body>
+</html>
