@@ -1,0 +1,32 @@
+.content{
+    text-align: center;
+    margin-top: 100px;
+}
+form{
+    margin: auto;
+    width: 385px;
+    padding-top: 10px;
+}
+form input{
+    box-sizing: border-box;
+    width: 385px;
+    height: 42px;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    outline: none;
+}
+form button{
+    display: block;
+    width: 135px;
+    height: 42px;
+    margin-bottom: 15px;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+form a{
+    color: black;
+    display: block;
+    text-align: left;
+}
