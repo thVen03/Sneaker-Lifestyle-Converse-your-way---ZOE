@@ -97,6 +97,12 @@ header{
 .search{
     position: relative;
 }
+.search button{
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
 .search-inp{
     position: absolute;
     width: 300px;

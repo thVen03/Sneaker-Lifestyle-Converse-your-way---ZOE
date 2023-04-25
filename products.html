@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tất cả sản phẩm - ZOE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="Images/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+    <header>
+		<div class="header__logo">
+			<a href="index.html"><img src="Images/logo.webp" alt=""></a>
+		</div>
+		<div class="header__nav">
+            <div class="header__nav--main">
+                <ul>
+                    <li class="js-close"><a href="products.html">THEO STYLE</a></li>
+                    <li class="js-close"><a href="products.html">BÔ SƯU TẬP <i class="fa-solid fa-chevron-down"></i>
+                        <ul class="sub-nav">
+                            <li><a href="products.html">BASIC <i class="fa-solid fa-chevron-right"></i></a>
+                                <ul class="sub-nav--">
+                                    <li><a href="products.html">MULE</a></li>
+                                    <li><a href="products.html">LOW TOP</a></li>
+                                    <li><a href="products.html">HIGH TOP</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html">ESSENTIALS <i class="fa-solid fa-chevron-right"></i></a>
+                                <ul class="sub-nav--">
+                                    <li><a href="products.html">HUXLEY</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html">ART</a></li>
+                            <li><a href="products.html">THỜI TRANG <i class="fa-solid fa-chevron-right"></i></a>
+                                <ul class="sub-nav--">
+                                    <li><a href="products.html">VALENTINE 2023</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html">SALE</a></li>
+                        </ul>
+                    </li>
+                    <li class="js-close"><a href="products.html">PHỤ KIỆN</a></li>
+                </ul>
+            </div>
+            <div class="search js-search"><button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="search-inp">
+                    <input type="text" name="" id="" placeholder=" Tìm kiếm sản phẩm...">
+                </div>
+            </div>
+            <div class="user js-close"><a href="register.html"><i class="fa-regular fa-user"></i></a></div>
+            <div class="cart js-close"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
+		</div>
+    </header>
+    <div class="content">
+        <div class="products-banner">
+            <img src="Images/collection_banner.webp" alt="">
+        </div>
+        <div class="content__main">
+            <div class="left-sidebar">
+                <div class="group-filter">
+                    <h2>GIÁ SẢN PHẨM</h2>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="" id="price1">
+                            <label for="price1">Dưới 100,000đ</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="price2">
+                            <label for="price2">100,000đ - 200,000đ</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="price3">
+                            <label for="price3">200,000đ - 300,000đ</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="price4">
+                            <label for="price4">300,000đ - 400,000đ</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="price5">
+                            <label for="price5">Trên 500,000đ</label>   
+                        </li>
+                    </ul>
+                </div>
+                <div class="group-filter">
+                    <h2>MÀU SẮC</h2>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="" id="black">
+                            <label for="black">Đen
+                                <div class="view-color" style="background-color: black"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="white">
+                            <label for="white">Trắng
+                                <div class="view-color" style="background-color: white"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="red">
+                            <label for="red">Đỏ
+                                <div class="view-color" style="background-color: red"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="orange">
+                            <label for="orange">Cam
+                                <div class="view-color" style="background-color: orange"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="yellow">
+                            <label for="yellow">Vàng
+                                <div class="view-color" style="background-color: yellow"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="green">
+                            <label for="green">Lục
+                                <div class="view-color" style="background-color: green"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="blue">
+                            <label for="blue">Lam
+                                <div class="view-color" style="background-color: blue"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="indigo">
+                            <label for="indigo">Chàm
+                                <div class="view-color" style="background-color: indigo"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="purple">
+                            <label for="purple">Tím
+                                <div class="view-color" style="background-color: purple"></div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="group-filter">
+                    <h2>SIZE</h2>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="" id="size1">
+                            <label for="size1">35</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="size2">
+                            <label for="size2">36</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="size3">
+                            <label for="size3">37</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="size4">
+                            <label for="size4">38</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="size5">
+                            <label for="size5">39</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="size6">
+                            <label for="size6">40</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="size7">
+                            <label for="size7">41</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="size8">
+                            <label for="size8">42</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="size9">
+                            <label for="size9">43</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="size10">
+                            <label for="size10">44</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="list-products">
+                <h1>Tất cả sản phẩm</h1>
+                <div class="main-product">
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="#">
+                                <picture class="img-1">
+                                    <img src="Images/products/c68dedbb-6df3-40f6-b600-df57ff012da2_4970aa1f0a6a4e1c9a181594348b3a4b_grande.webp" alt="">
+                                </picture>
+                                <picture class="img-2">
+                                    <img src="Images/products/3d25496a-4f62-46b4-a078-2539a4de9fd0_e32e62c9047649d9948b7be515135c6d_grande.webp" alt="" title="Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402) | Zoe Official">
+                                </picture>
+                            </a>
+                            <div class="button">
+                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" title="Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402) | Zoe Official">
+                                Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402) | Zoe Official
+                            </a>
+                            <h3>679.000đ</h3>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="#">
+                                <picture class="img-1">
+                                    <img src="Images/products/high_top_pink_1_f3d17c71bc1e451e88cf27c3b603a09b_grande.webp" alt="">
+                                </picture>
+                                <picture class="img-2">
+                                    <img src="Images/products/high_top_pink_2_40287e5e7c7d4bc2bc32f53e174aca62_grande.webp" alt="" title="Zebra High Zoe Pinkie">
+                                </picture>
+                            </a>
+                            <div class="button">
+                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" title="Zebra High Zoe Pinkie">
+                                Zebra High Zoe Pinkie
+                            </a>
+                            <h3>1.050.000đ</h3>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="#">
+                                <picture class="img-1">
+                                    <img src="Images/products/a_de2bccefbd7c48ae91ce63b27b3c1d1c_grande.webp" alt="">
+                                </picture>
+                                <picture class="img-2">
+                                    <img src="Images/products/b_217c6178b9d94a7eb99ac00021f8374e_grande.webp" alt="" title="ZOE Authentic White">
+                                </picture>
+                            </a>
+                            <div class="button">
+                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" title="ZOE Authentic White">
+                                ZOE Authentic White
+                            </a>
+                            <h3>390.000đ</h3>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="#">
+                                <picture class="img-1">
+                                    <img src="Images/products/4_3c756fbcab34414b8740274aec140a00_grande.webp" alt="">
+                                </picture>
+                                <picture class="img-2">
+                                    <img src="Images/products/2_23c126b5e69a4d63b6f839166fa20c4e_grande.webp" alt="" title="ZOE Chang'e Flower">
+                                </picture>
+                            </a>
+                            <div class="button">
+                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" title="ZOE Chang'e Flower">
+                                ZOE Chang'e Flower
+                            </a>
+                            <h3>450.000đ</h3>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="#">
+                                <picture class="img-1">
+                                    <img src="Images/products/ht_black_1_eda23b4d446c48ba86587b9436530734_grande.webp" alt="">
+                                </picture>
+                                <picture class="img-2">
+                                    <img src="Images/products/ht_black_2_552d0dc6fd5b4180aec396297d505cca_grande.webp" alt="" title="Zebra High Đen Black">
+                                </picture>
+                            </a>
+                            <div class="button">
+                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" title="Zebra High Đen Black">
+                                Zebra High Đen Black
+                            </a>
+                            <h3>1.050.000đ</h3>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="#">
+                                <picture class="img-1">
+                                    <img src="Images/products/1_583c78726f7540008d17f33d22d2ffe9_grande.webp" alt="">
+                                </picture>
+                                <picture class="img-2">
+                                    <img src="Images/products/3_8896b75da91740fcbfbb56395dc6832b_grande.webp" alt="" title="Zoe Yellow - Low Top">
+                                </picture>
+                            </a>
+                            <div class="button">
+                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" title="Zoe Yellow - Low Top">
+                                Zoe Yellow - Low Top
+                            </a>
+                            <h3>520.000đ</h3>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="#">
+                                <picture class="img-1">
+                                    <img src="Images/products/a_82e510a105e545eab08345ec5411c6f9_grande.webp" alt="">
+                                </picture>
+                                <picture class="img-2">
+                                    <img src="Images/products/b_4c41160b8de4435f9f135399d12c60a0_grande.webp" alt="" title="Giày Pháp Phục Vàng">
+                                </picture>
+                            </a>
+                            <div class="button">
+                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" title="Giày Pháp Phục Vàng">
+                                Giày Pháp Phục Vàng
+                            </a>
+                            <h3>470.000đ</h3>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="#">
+                                <picture class="img-1">
+                                    <img src="Images/products/a_77002d2f09434252962a306ad887b468_grande.webp" alt="">
+                                </picture>
+                                <picture class="img-2">
+                                    <img src="Images/products/b_af29430110a9479f8fb11f7286e022a4_grande.webp" alt="" title="Giày Pháp Phục Xám">
+                                </picture>
+                            </a>
+                            <div class="button">
+                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" title="Giày Pháp Phục Xám">
+                                Giày Pháp Phục Xám
+                            </a>
+                            <h3>470.000đ</h3>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="#">
+                                <picture class="img-1">
+                                    <img src="Images/products/a_bc07dc06a7d34ad4bd17687444d2a1b1_grande.webp" alt="">
+                                </picture>
+                                <picture class="img-2">
+                                    <img src="Images/products/b_320a10c2d06e4c9a8927f04f7eed9d99_grande.webp" alt="" title="Giày Pháp Phục Nâu">
+                                </picture>
+                            </a>
+                            <div class="button">
+                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#" title="Giày Pháp Phục Nâu">
+                                Giày Pháp Phục Nâu
+                            </a>
+                            <h3>470.000đ</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="js-close">
+        <div class="footer__top">
+            <div class="footer__top--logo">
+                <a href="index.html"><img src="Images/logo.webp" alt=""></a>
+            </div>
+            <div class="footer__top--contact">
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="https://goo.gl/maps/F7sJvA3aCJf6zi326">ZOE - Sneakers & Craft</a>
+                </p>
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="https://goo.gl/maps/F7sJvA3aCJf6zi326">ZOE - Văn phòng</a>
+                </p>
+            </div>
+            <div class="footer__top--contact">
+                <p><i class="fa-solid fa-phone"></i> Điện thoại: 0969434712</p>
+            </div>
+            <div class="footer__top--contact">
+                <p><i class="fa-solid fa-envelope"></i> Email: thanhven16@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__bottom--payment">
+                <img src="Images/footer_payment_img.webp" alt="" usemap="#workmap">
+                <map name="workmap">
+                    <area shape="circle" coords="0,20,50" href="https://www.facebook.com" alt="">
+                    <area shape="circle" coords="50,20,50" href="https://www.tiktok.com" alt="">
+                    <area shape="circle" coords="100,20,50" href="https://www.instagram.com" alt="">
+                </map>
+            </div>
+            <ul class="footer__bottom--menu">
+                <li><a href="">Giới thiệu</a></li>
+                <li><a href="">Hướng dẫn mua hàng</a></li>
+                <li><a href="">Chính sách giao nhận</a></li>
+                <li><a href="">Hình thức thanh toán</a></li>
+                <li><a href="">Chính sách Bảo hành - Đổi trả</a></li>
+                <li><a href="">Chính sách bảo mật</a></li>
+            </ul>
+            <div class="footer__bottom--wrap">
+                <p>Copyright © 2023 by 2001216309 - Nguyễn Thanh Vẹn</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const searchBtn = document.querySelector('.js-search')
+        const searchInp = document.querySelector('.search-inp')
+        const searchInpCloses = document.querySelectorAll('.js-close')
+        function showSearchInp(){
+            searchInp.classList.add('open')
+        }
+        function hideSearchInp(){
+            searchInp.classList.remove('open')
+        }
+        for (const searchInpClose of searchInpCloses){
+            searchInpClose.addEventListener('click', hideSearchInp)
+        }
+        searchBtn.addEventListener('click', showSearchInp)
+    </script>
+</body>
+</html>
