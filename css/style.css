@@ -96,6 +96,7 @@ header{
 }
 .search{
     position: relative;
+    z-index: 44;
 }
 .search button{
     color: white;
@@ -197,6 +198,9 @@ header{
 }
 .product-img .button:hover{
     background-color: rgba(75, 63, 63, 0.9);
+}
+.product-detail a:hover{
+    color: rgb(151, 9, 9);
 }
 .btn-view{
     border-radius: 4px;

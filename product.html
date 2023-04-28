@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tạo tài khoản - ZOE</title>
+    <title>Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402)</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/register.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="Images/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/product.css">
 </head>
 <body>
     <header>
@@ -68,18 +68,92 @@
                 </script>
             </div>
             <div class="user"><a href="register.html"><i class="fa-regular fa-user"></i></a></div>
-            <div class="cart"><a href="product.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
+            <div class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
 		</div>
     </header>
     <div class="content">
-        <h2 style="font-weight: lighter;">ĐĂNG KÝ</h2>
-        <div class="main-content">
-            <input type="text" name="" id="" placeholder="Họ">
-            <input type="text" name="" id="" placeholder="Tên">
-            <input type="text" name="" id="" placeholder="Email">
-            <input type="password" name="" id="" placeholder="Mật khẩu">
-            <button><h3>ĐĂNG KÝ</h3></button>
-            <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Quay lại trang chủ</a>
+        <div class="product-detail">
+            <div class="left-content">
+                <picture>
+                    <img src="Images/products/3d25496a-4f62-46b4-a078-2539a4de9fd0_e32e62c9047649d9948b7be515135c6d_grande.webp" alt="">
+                </picture>
+                <ul class="list-img">
+                    <li class="border-img"><img src="Images/products/3d25496a-4f62-46b4-a078-2539a4de9fd0_e32e62c9047649d9948b7be515135c6d_grande.webp" alt=""></li>
+                    <li class=""><img src="Images/products/c68dedbb-6df3-40f6-b600-df57ff012da2_4970aa1f0a6a4e1c9a181594348b3a4b_grande.webp" alt=""></li>
+                    <li class=""><img src="Images/products/3c99cdb8-2f0b-4893-9cab-93cdf96eb48e_dbf5bb6e7bad4d6bbc4c7ea353165dea_master.webp" alt=""></li>
+                    <script>
+                        const list_li = document.querySelectorAll('.list-img li')
+                        for(const li of list_li){
+                            li.addEventListener('click', addBorder)
+                            function addBorder(){
+                                for(const li of list_li){
+                                    li.classList.remove('border-img')
+                                }
+                                li.classList.add('border-img')
+                            }
+                        }
+                    </script>
+                </ul>
+                <script>
+                    const picture = document.querySelector('picture img')
+                    const images = document.querySelectorAll('.list-img img')
+                    for(const image of images){
+                        image.addEventListener('click', showImg)
+                        function showImg(){
+                            picture.src=image.src;
+                        }
+                    }
+                </script>
+            </div>
+            <div class="right-content">
+                <h1>Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402) | Zoe Official</h1>
+                <p class="price">679.000đ</p>
+                <div class="product-size">
+                    <h3>Kích thước:</h3>
+                    <ul>
+                        <li class="border-size">35</li>
+                        <li class="">36</li>
+                        <li class="">37</li>
+                        <li class="">38</li>
+                        <li class="">39</li>
+                        <li class="">40</li>
+                        <li class="">41</li>
+                        <li class="">42</li>
+                        <li class="">43</li>
+                        <script>
+                            const list_size = document.querySelectorAll('.product-size li')
+                            for(const size of list_size){
+                                size.addEventListener('click', addBorder)
+                                function addBorder(){
+                                    for(const size of list_size){
+                                        size.classList.remove('border-size')
+                                    }
+                                    size.classList.add('border-size')
+                                }
+                            }
+                        </script>
+                    </ul>
+                </div>
+                <div class="product-color">
+                    <h3>Màu sắc:</h3>
+                    <ul>
+                        <li>Màu be</li>
+                    </ul>
+                </div>
+                <div class="selector-actions">
+                    <div class="quantity">
+                        <input type="button" value="-" name="" id="" class="qty-btn">
+                        <input type="text" name="" value="1" min="1" id="qty-scanf">
+                        <input type="button" value="+" name="" id="" class="qty-btn">
+                    </div>
+                    <div class="add-to-cart"></div>
+                    <div class="buy-now"></div>
+                </div>
+                <div class="hotline-and-policy">
+                    <div class="product-hotline"></div>
+                    <div class="product-policy"></div>
+                </div>
+            </div>
         </div>
     </div>
     <footer>

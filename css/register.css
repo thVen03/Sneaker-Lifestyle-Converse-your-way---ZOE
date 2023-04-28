@@ -2,12 +2,12 @@
     text-align: center;
     margin-top: 100px;
 }
-form{
+.main-content{
     margin: auto;
     width: 385px;
     padding-top: 10px;
 }
-form input{
+.main-content input{
     box-sizing: border-box;
     width: 385px;
     height: 42px;
@@ -15,7 +15,7 @@ form input{
     margin-bottom: 15px;
     outline: none;
 }
-form button{
+.main-content button{
     display: block;
     width: 135px;
     height: 42px;
@@ -25,7 +25,7 @@ form button{
     border: none;
     cursor: pointer;
 }
-form a{
+.main-content a{
     color: black;
     display: block;
     text-align: left;

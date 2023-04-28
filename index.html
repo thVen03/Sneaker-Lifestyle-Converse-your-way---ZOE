@@ -17,8 +17,8 @@
 		<div class="header__nav">
             <div class="header__nav--main">
                 <ul>
-                    <li class="js-close"><a href="products.html">THEO STYLE</a></li>
-                    <li class="js-close"><a href="products.html">BÔ SƯU TẬP <i class="fa-solid fa-chevron-down"></i>
+                    <li><a href="products.html">THEO STYLE</a></li>
+                    <li><a href="products.html">BÔ SƯU TẬP <i class="fa-solid fa-chevron-down"></i>
                         <ul class="sub-nav">
                             <li><a href="products.html">BASIC <i class="fa-solid fa-chevron-right"></i></a>
                                 <ul class="sub-nav--">
@@ -41,19 +41,36 @@
                             <li><a href="products.html">SALE</a></li>
                         </ul>
                     </li>
-                    <li class="js-close"><a href="products.html">PHỤ KIỆN</a></li>
+                    <li><a href="products.html">PHỤ KIỆN</a></li>
                 </ul>
             </div>
-            <div class="search js-search"><button><i class="fa-solid fa-magnifying-glass"></i></button>
-                <div class="search-inp">
+            <div class="search" onclick="stopPropagation()">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="search-inp" id="search-inp">
                     <input type="text" name="" id="" placeholder=" Tìm kiếm sản phẩm...">
                 </div>
+                <script>
+                    const searchBtn = document.querySelector('.search-btn')
+                    const searchInp = document.querySelector('.search-inp')
+                    const hide_Inp = document.querySelector('body')
+                    function toggleBtn(){
+                        document.getElementById("search-inp").classList.toggle("open")
+                    }
+                    searchBtn.addEventListener('click', toggleBtn)
+                    function stopPropagation(){
+                        event.stopPropagation()
+                    }
+                    function hideSearchInp(){
+                        searchInp.classList.remove('open')
+                    }
+                    hide_Inp.addEventListener('click', hideSearchInp)
+                </script>
             </div>
-            <div class="user js-close"><a href="register.html"><i class="fa-regular fa-user"></i></a></div>
-            <div class="cart js-close"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
+            <div class="user"><a href="register.html"><i class="fa-regular fa-user"></i></a></div>
+            <div class="cart"><a href="product.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
 		</div>
     </header>
-    <div class="home js-close">
+    <div class="home">
         <div class="home-slider-image">
             <a href="products.html"><img src="Images/home_slider_image_1.webp" alt=""></a>
         </div>
@@ -72,7 +89,7 @@
             <div class="main-product">
                 <div class="product-item">
                     <div class="product-img">
-                        <a href="#">
+                        <a href="product.html">
                             <picture class="img-1">
                                 <img src="Images/products/c68dedbb-6df3-40f6-b600-df57ff012da2_4970aa1f0a6a4e1c9a181594348b3a4b_grande.webp" alt="">
                             </picture>
@@ -81,11 +98,11 @@
                             </picture>
                         </a>
                         <div class="button">
-                            <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                            <a class="button" href="product.html">Chi Tiết Sản Phẩm</a>
                         </div>
                     </div>
                     <div class="product-detail">
-                        <a href="#" title="Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402) | Zoe Official">
+                        <a href="product.html" title="Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402) | Zoe Official">
                             Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402) | Zoe Official
                         </a>
                         <h3>679.000đ</h3>
@@ -93,7 +110,7 @@
                 </div>
                 <div class="product-item">
                     <div class="product-img">
-                        <a href="#">
+                        <a href="product.html">
                             <picture class="img-1">
                                 <img src="Images/products/high_top_pink_1_f3d17c71bc1e451e88cf27c3b603a09b_grande.webp" alt="">
                             </picture>
@@ -102,11 +119,11 @@
                             </picture>
                         </a>
                         <div class="button">
-                            <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                            <a class="button" href="product.html">Chi Tiết Sản Phẩm</a>
                         </div>
                     </div>
                     <div class="product-detail">
-                        <a href="#" title="Zebra High Zoe Pinkie">
+                        <a href="product.html" title="Zebra High Zoe Pinkie">
                             Zebra High Zoe Pinkie
                         </a>
                         <h3>1.050.000đ</h3>
@@ -135,7 +152,7 @@
             <div class="main-product">
                 <div class="product-item">
                     <div class="product-img">
-                        <a href="#">
+                        <a href="product.html">
                             <picture class="img-1">
                                 <img src="Images/products/a_de2bccefbd7c48ae91ce63b27b3c1d1c_grande.webp" alt="">
                             </picture>
@@ -144,11 +161,11 @@
                             </picture>
                         </a>
                         <div class="button">
-                            <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                            <a class="button" href="product.html">Chi Tiết Sản Phẩm</a>
                         </div>
                     </div>
                     <div class="product-detail">
-                        <a href="#" title="ZOE Authentic White">
+                        <a href="product.html" title="ZOE Authentic White">
                             ZOE Authentic White
                         </a>
                         <h3>390.000đ</h3>
@@ -156,7 +173,7 @@
                 </div>
                 <div class="product-item">
                     <div class="product-img">
-                        <a href="#">
+                        <a href="product.html">
                             <picture class="img-1">
                                 <img src="Images/products/4_3c756fbcab34414b8740274aec140a00_grande.webp" alt="">
                             </picture>
@@ -165,11 +182,11 @@
                             </picture>
                         </a>
                         <div class="button">
-                            <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                            <a class="button" href="product.html">Chi Tiết Sản Phẩm</a>
                         </div>
                     </div>
                     <div class="product-detail">
-                        <a href="#" title="ZOE Chang'e Flower">
+                        <a href="product.html" title="ZOE Chang'e Flower">
                             ZOE Chang'e Flower
                         </a>
                         <h3>450.000đ</h3>
@@ -184,7 +201,7 @@
             </div>
         </div>
     </div>
-    <footer class="js-close">
+    <footer>
         <div class="footer__top">
             <div class="footer__top--logo">
                 <a href="index.html"><img src="Images/logo.webp" alt=""></a>
@@ -228,20 +245,5 @@
             </div>
         </div>
     </footer>
-    <script>
-        const searchBtn = document.querySelector('.js-search')
-        const searchInp = document.querySelector('.search-inp')
-        const searchInpCloses = document.querySelectorAll('.js-close')
-        function showSearchInp(){
-            searchInp.classList.add('open')
-        }
-        function hideSearchInp(){
-            searchInp.classList.remove('open')
-        }
-        for (const searchInpClose of searchInpCloses){
-            searchInpClose.addEventListener('click', hideSearchInp)
-        }
-        searchBtn.addEventListener('click', showSearchInp)
-    </script>
 </body>
 </html>

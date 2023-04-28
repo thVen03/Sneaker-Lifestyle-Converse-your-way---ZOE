@@ -18,8 +18,8 @@
 		<div class="header__nav">
             <div class="header__nav--main">
                 <ul>
-                    <li class="js-close"><a href="products.html">THEO STYLE</a></li>
-                    <li class="js-close"><a href="products.html">BÔ SƯU TẬP <i class="fa-solid fa-chevron-down"></i>
+                    <li><a href="products.html">THEO STYLE</a></li>
+                    <li><a href="products.html">BÔ SƯU TẬP <i class="fa-solid fa-chevron-down"></i>
                         <ul class="sub-nav">
                             <li><a href="products.html">BASIC <i class="fa-solid fa-chevron-right"></i></a>
                                 <ul class="sub-nav--">
@@ -42,16 +42,33 @@
                             <li><a href="products.html">SALE</a></li>
                         </ul>
                     </li>
-                    <li class="js-close"><a href="products.html">PHỤ KIỆN</a></li>
+                    <li><a href="products.html">PHỤ KIỆN</a></li>
                 </ul>
             </div>
-            <div class="search js-search"><button><i class="fa-solid fa-magnifying-glass"></i></button>
-                <div class="search-inp">
+            <div class="search" onclick="stopPropagation()">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="search-inp" id="search-inp">
                     <input type="text" name="" id="" placeholder=" Tìm kiếm sản phẩm...">
                 </div>
+                <script>
+                    const searchBtn = document.querySelector('.search-btn')
+                    const searchInp = document.querySelector('.search-inp')
+                    const hide_Inp = document.querySelector('body')
+                    function toggleBtn(){
+                        document.getElementById("search-inp").classList.toggle("open")
+                    }
+                    searchBtn.addEventListener('click', toggleBtn)
+                    function stopPropagation(){
+                        event.stopPropagation()
+                    }
+                    function hideSearchInp(){
+                        searchInp.classList.remove('open')
+                    }
+                    hide_Inp.addEventListener('click', hideSearchInp)
+                </script>
             </div>
-            <div class="user js-close"><a href="register.html"><i class="fa-regular fa-user"></i></a></div>
-            <div class="cart js-close"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
+            <div class="user"><a href="register.html"><i class="fa-regular fa-user"></i></a></div>
+            <div class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
 		</div>
     </header>
     <div class="content">
@@ -195,7 +212,7 @@
                 <div class="main-product">
                     <div class="product-item">
                         <div class="product-img">
-                            <a href="#">
+                            <a href="product.html">
                                 <picture class="img-1">
                                     <img src="Images/products/c68dedbb-6df3-40f6-b600-df57ff012da2_4970aa1f0a6a4e1c9a181594348b3a4b_grande.webp" alt="">
                                 </picture>
@@ -204,11 +221,11 @@
                                 </picture>
                             </a>
                             <div class="button">
-                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                                <a class="button" href="product.html">Chi Tiết Sản Phẩm</a>
                             </div>
                         </div>
                         <div class="product-detail">
-                            <a href="#" title="Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402) | Zoe Official">
+                            <a href="product.html" title="Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402) | Zoe Official">
                                 Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402) | Zoe Official
                             </a>
                             <h3>679.000đ</h3>
@@ -216,7 +233,7 @@
                     </div>
                     <div class="product-item">
                         <div class="product-img">
-                            <a href="#">
+                            <a href="product.html">
                                 <picture class="img-1">
                                     <img src="Images/products/high_top_pink_1_f3d17c71bc1e451e88cf27c3b603a09b_grande.webp" alt="">
                                 </picture>
@@ -225,11 +242,11 @@
                                 </picture>
                             </a>
                             <div class="button">
-                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                                <a class="button" href="product.html">Chi Tiết Sản Phẩm</a>
                             </div>
                         </div>
                         <div class="product-detail">
-                            <a href="#" title="Zebra High Zoe Pinkie">
+                            <a href="product.html" title="Zebra High Zoe Pinkie">
                                 Zebra High Zoe Pinkie
                             </a>
                             <h3>1.050.000đ</h3>
@@ -237,7 +254,7 @@
                     </div>
                     <div class="product-item">
                         <div class="product-img">
-                            <a href="#">
+                            <a href="product.html">
                                 <picture class="img-1">
                                     <img src="Images/products/a_de2bccefbd7c48ae91ce63b27b3c1d1c_grande.webp" alt="">
                                 </picture>
@@ -246,11 +263,11 @@
                                 </picture>
                             </a>
                             <div class="button">
-                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                                <a class="button" href="product.html">Chi Tiết Sản Phẩm</a>
                             </div>
                         </div>
                         <div class="product-detail">
-                            <a href="#" title="ZOE Authentic White">
+                            <a href="product.html" title="ZOE Authentic White">
                                 ZOE Authentic White
                             </a>
                             <h3>390.000đ</h3>
@@ -258,7 +275,7 @@
                     </div>
                     <div class="product-item">
                         <div class="product-img">
-                            <a href="#">
+                            <a href="product.html">
                                 <picture class="img-1">
                                     <img src="Images/products/4_3c756fbcab34414b8740274aec140a00_grande.webp" alt="">
                                 </picture>
@@ -267,11 +284,11 @@
                                 </picture>
                             </a>
                             <div class="button">
-                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                                <a class="button" href="product.html">Chi Tiết Sản Phẩm</a>
                             </div>
                         </div>
                         <div class="product-detail">
-                            <a href="#" title="ZOE Chang'e Flower">
+                            <a href="product.html" title="ZOE Chang'e Flower">
                                 ZOE Chang'e Flower
                             </a>
                             <h3>450.000đ</h3>
@@ -279,7 +296,7 @@
                     </div>
                     <div class="product-item">
                         <div class="product-img">
-                            <a href="#">
+                            <a href="product.html">
                                 <picture class="img-1">
                                     <img src="Images/products/ht_black_1_eda23b4d446c48ba86587b9436530734_grande.webp" alt="">
                                 </picture>
@@ -288,11 +305,11 @@
                                 </picture>
                             </a>
                             <div class="button">
-                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                                <a class="button" href="product.html">Chi Tiết Sản Phẩm</a>
                             </div>
                         </div>
                         <div class="product-detail">
-                            <a href="#" title="Zebra High Đen Black">
+                            <a href="product.html" title="Zebra High Đen Black">
                                 Zebra High Đen Black
                             </a>
                             <h3>1.050.000đ</h3>
@@ -300,7 +317,7 @@
                     </div>
                     <div class="product-item">
                         <div class="product-img">
-                            <a href="#">
+                            <a href="product.html">
                                 <picture class="img-1">
                                     <img src="Images/products/1_583c78726f7540008d17f33d22d2ffe9_grande.webp" alt="">
                                 </picture>
@@ -309,11 +326,11 @@
                                 </picture>
                             </a>
                             <div class="button">
-                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                                <a class="button" href="product.html">Chi Tiết Sản Phẩm</a>
                             </div>
                         </div>
                         <div class="product-detail">
-                            <a href="#" title="Zoe Yellow - Low Top">
+                            <a href="product.html" title="Zoe Yellow - Low Top">
                                 Zoe Yellow - Low Top
                             </a>
                             <h3>520.000đ</h3>
@@ -321,7 +338,7 @@
                     </div>
                     <div class="product-item">
                         <div class="product-img">
-                            <a href="#">
+                            <a href="product.html">
                                 <picture class="img-1">
                                     <img src="Images/products/a_82e510a105e545eab08345ec5411c6f9_grande.webp" alt="">
                                 </picture>
@@ -330,11 +347,11 @@
                                 </picture>
                             </a>
                             <div class="button">
-                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                                <a class="button" href="product.html">Chi Tiết Sản Phẩm</a>
                             </div>
                         </div>
                         <div class="product-detail">
-                            <a href="#" title="Giày Pháp Phục Vàng">
+                            <a href="product.html" title="Giày Pháp Phục Vàng">
                                 Giày Pháp Phục Vàng
                             </a>
                             <h3>470.000đ</h3>
@@ -342,7 +359,7 @@
                     </div>
                     <div class="product-item">
                         <div class="product-img">
-                            <a href="#">
+                            <a href="product.html">
                                 <picture class="img-1">
                                     <img src="Images/products/a_77002d2f09434252962a306ad887b468_grande.webp" alt="">
                                 </picture>
@@ -351,11 +368,11 @@
                                 </picture>
                             </a>
                             <div class="button">
-                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                                <a class="button" href="product.html">Chi Tiết Sản Phẩm</a>
                             </div>
                         </div>
                         <div class="product-detail">
-                            <a href="#" title="Giày Pháp Phục Xám">
+                            <a href="product.html" title="Giày Pháp Phục Xám">
                                 Giày Pháp Phục Xám
                             </a>
                             <h3>470.000đ</h3>
@@ -363,7 +380,7 @@
                     </div>
                     <div class="product-item">
                         <div class="product-img">
-                            <a href="#">
+                            <a href="product.html">
                                 <picture class="img-1">
                                     <img src="Images/products/a_bc07dc06a7d34ad4bd17687444d2a1b1_grande.webp" alt="">
                                 </picture>
@@ -372,21 +389,28 @@
                                 </picture>
                             </a>
                             <div class="button">
-                                <a class="button" href="#">Chi Tiết Sản Phẩm</a>
+                                <a class="button" href="product.html">Chi Tiết Sản Phẩm</a>
                             </div>
                         </div>
                         <div class="product-detail">
-                            <a href="#" title="Giày Pháp Phục Nâu">
+                            <a href="product.html" title="Giày Pháp Phục Nâu">
                                 Giày Pháp Phục Nâu
                             </a>
                             <h3>470.000đ</h3>
                         </div>
                     </div>
+                    <div class="pagination">
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <footer class="js-close">
+    <footer>
         <div class="footer__top">
             <div class="footer__top--logo">
                 <a href="index.html"><img src="Images/logo.webp" alt=""></a>
@@ -430,20 +454,5 @@
             </div>
         </div>
     </footer>
-    <script>
-        const searchBtn = document.querySelector('.js-search')
-        const searchInp = document.querySelector('.search-inp')
-        const searchInpCloses = document.querySelectorAll('.js-close')
-        function showSearchInp(){
-            searchInp.classList.add('open')
-        }
-        function hideSearchInp(){
-            searchInp.classList.remove('open')
-        }
-        for (const searchInpClose of searchInpCloses){
-            searchInpClose.addEventListener('click', hideSearchInp)
-        }
-        searchBtn.addEventListener('click', showSearchInp)
-    </script>
 </body>
 </html>
