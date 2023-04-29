@@ -35,13 +35,9 @@ h1, h2{
 .list-products{
     width: 80%;
 }
-.main-product{
-    margin: 0;
-    flex-wrap: wrap;
-}
 .product-item{
-    width: 30%;
     margin: 30px 30px 0 0;
+    text-align: center;
 }
 .pagination{
     width: 100%;

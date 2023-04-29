@@ -1,60 +1,86 @@
 .content{
     padding: 50px;
 }
-.product-detail{
+.content__top{
     display: flex;
+    margin-bottom: 40px
 }
-.left-content{
-    width: 40%;
+.content__top--left{
+    width: 50%;
 }
-.left-content picture img{
-    width: 420px;
+.content__top--left img{
+    width: 100%;
 }
-.list-img img{
-    width: 120px;
+.list-img li{
+    display: inline-block;
+    width: 20%;
+    margin: 0 10px;
+    box-sizing: border-box;
 }
-.content ul{
-    display: flex;
-}
-.list-img li:hover img{
+.border-img{
     border: 1px solid black;
 }
-.right-content{
-    width: 60%;
+.list-img li:hover{
+    border: 1px solid black;
 }
-.right-content h1, h3{
-    font-weight: 500;
+.content__top--right{
+    width: 50%;
 }
-.right-content .price{
-    font-size: 28px;
+.content__top--right > div{
+    margin-top: 20px;
 }
-.product-size li{
+.content__top--right h1::after{
+    content: '';
+    display: block;
+    width: 50px;
+    height: 0.5px;
+    background-color: rgb(74, 15, 15);
+    margin: 20px 0;
+}
+.content__top--right li{
+    display: inline-block;
     width: 40px;
     height: 40px;
     line-height: 40px;
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
-    margin:0 10px 20px 0;
+    margin-right: 10px;
     cursor: pointer;
 }
-.border-img img,
-.product-size .border-size{
-    border: 1px solid black;
+.border-size{
+    border: 1px solid black !important;
 }
-.quantity input{
+.qty-inp input{
     width: 50px;
     height: 50px;
     float: left;
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    background-color: white;
     border-radius: 5px;
     font-size: 24px;
-    margin: 20px 5px 20px 0;
+    margin-right: 5px;
     text-align: center;
     color: #909090;
 }
-.quantity .qty-btn{
-    cursor: pointer;
+.hotline-and-policy{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
+.product-hotline{
+    margin-bottom: 10px;
+}
+.hotline-and-policy h4{
+    color: rgb(0, 188, 0);
+    text-transform: uppercase;
+}
+.content__bottom > h3{
+    border-bottom: 1px solid #909090;
+}
+.product-description{
+    margin-bottom: 50px;
+}
+.product-description h4{
+    margin: 20px 0;
 }

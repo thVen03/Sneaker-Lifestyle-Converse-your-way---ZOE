@@ -72,8 +72,8 @@
 		</div>
     </header>
     <div class="content">
-        <div class="product-detail">
-            <div class="left-content">
+        <div class="content__top">
+            <div class="content__top--left">
                 <picture>
                     <img src="Images/products/3d25496a-4f62-46b4-a078-2539a4de9fd0_e32e62c9047649d9948b7be515135c6d_grande.webp" alt="">
                 </picture>
@@ -105,11 +105,11 @@
                     }
                 </script>
             </div>
-            <div class="right-content">
+            <div class="content__top--right">
                 <h1>Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402) | Zoe Official</h1>
-                <p class="price">679.000đ</p>
+                <p style="font-size: 28px">679.000đ</p>
                 <div class="product-size">
-                    <h3>Kích thước:</h3>
+                    <h4>Kích thước:</h4>
                     <ul>
                         <li class="border-size">35</li>
                         <li class="">36</li>
@@ -135,23 +135,179 @@
                     </ul>
                 </div>
                 <div class="product-color">
-                    <h3>Màu sắc:</h3>
+                    <h4>Màu sắc:</h4>
                     <ul>
-                        <li>Màu be</li>
+                        <li style="background-color: beige" class="border-size">Be</li>
                     </ul>
                 </div>
                 <div class="selector-actions">
-                    <div class="quantity">
-                        <input type="button" value="-" name="" id="" class="qty-btn">
-                        <input type="text" name="" value="1" min="1" id="qty-scanf">
-                        <input type="button" value="+" name="" id="" class="qty-btn">
+                    <div class="qty-inp">
+                        <input type="button" value="-" onclick="quantity(-1)" style="cursor: pointer">
+                        <input type="text" value="1" id="totalClicks">
+                        <input type="button" value="+" onclick="quantity(+1)" style="cursor: pointer">
+                        <script>
+                            function quantity(value) {
+                                const totalClicks = document.getElementById("totalClicks")
+                                totalClicks.value = parseInt(totalClicks.value) + value
+                                if(totalClicks.value < 1)
+                                    totalClicks.value = 1
+                            }
+                        </script>
                     </div>
-                    <div class="add-to-cart"></div>
-                    <div class="buy-now"></div>
+                    <a href="#" class="button">
+                        Thêm vào giỏ
+                    </a>
+                    <a href="#" class="button">
+                        Mua ngay
+                    </a>
                 </div>
                 <div class="hotline-and-policy">
-                    <div class="product-hotline"></div>
-                    <div class="product-policy"></div>
+                    <div class="product-hotline">
+                        <h4>Gọi để mua hàng nhanh hơn</h4>
+                        <p><b style="font-size: 20px">0969.434.712</b> (7h:18h)</p>
+                    </div>
+                    <div class="product-policy">
+                        <h4>Chính sách bán hàng</h4>
+                        <p><b>Giao hàng miễn phí</b> (Hóa đơn trên 500k)</p>
+                        <p><b>Đổi trả miễn phí 14 ngày</b> (Với mua online)</p>
+                        <p><b>Thanh toán COD</b> (Hoặc chuyển khoản)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content__bottom">
+            <h3>Thông Tin Sản Phẩm</h3>
+            <div class="product-description">
+                <h4>Mô tả sản phẩm</h4>
+                <p>Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402)</p>
+                <p>Xuất xứ: Việt Nam</p>
+                <p>Size: 35 - 44</p>
+                <p>Màu sắc: Be, hoạ tiết trái tim</p>
+                <p>Thiết kế: trẻ trung, thời trang, kết hợp với phần trên giày có thêu hoa cúc nhí vàng. Lựa chọn phù hợp với các bạn nam và nữ sử dụng để đi chơi, đi làm</p>
+                <p>Chất liệu đế: Đế cao su lưu hoá nguyên khối, tính đàn hồi, có thể chịu nhiệt, êm ái và đặc biệt bền chắc. Đế giày cao su độ dày 3.2cm</p>
+                <p>Chất liệu vải: Vải Canvas với độ bền, chống nước, kháng nấm mốc từ bên ngoài</p>
+                <p>Lót giày: da tổng hợp, mềm mang rất êm chân, ít bám bẩn</p>
+                <h4>Hướng dẫn vệ sinh giày thể thao trái tim (giày sneaker trái tim).</h4>
+                <p>Nên vệ sinh giày thể thao vào ban ngày hạn chế vệ sinh giày vào buổi tối</p>
+                <p>Không để giày ngâm nước quá lâu hoặc mang giày khi đi trời mưa. </p>
+                <p>Định kỳ vệ sinh giày, không sử dụng thuốc tẩy để giặt</p>
+                <p>Quấn khăn giấy kín quanh giày và đem đi phơi khô dưới ánh mặt trời hoặc bóng râm.</p>
+                <p>Trong thời gian dài không mang, nên vệ sinh giày sạch sẽ và gói giày lại bằng giấy.</p>
+                <h4>Chính sách đổi hàng và bảo hành sản phẩm.</h4>
+                <p>Chấp nhận đổi hàng trong các trường hợp hàng bị lỗi, không đúng mẫu, không vừa size</p>
+                <p>Hỗ trợ đổi size và đổi mẫu trong vòng 15 ngày kể từ khi nhận sản phẩm.</p>
+                <p>Hỗ trợ phí vận chuyển để khách hàng đổi sản phẩm mới nếu vì lý do lỗi kỹ thuật</p>
+            </div>
+        </div>
+        <div class="home home-product">
+            <h1 class="section-title">
+                <span style="border-bottom: 2px solid black;">SẢN PHẨM LIÊN QUAN</span>
+            </h1>
+            <div class="main-product">
+                <div class="product-item">
+                    <div class="product-img">
+                        <a href="product.html">
+                            <picture class="img-1">
+                                <img src="Images/products/c68dedbb-6df3-40f6-b600-df57ff012da2_4970aa1f0a6a4e1c9a181594348b3a4b_grande.webp" alt="">
+                            </picture>
+                            <picture class="img-2">
+                                <img src="Images/products/3d25496a-4f62-46b4-a078-2539a4de9fd0_e32e62c9047649d9948b7be515135c6d_grande.webp" alt="" title="Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402) | Zoe Official">
+                            </picture>
+                        </a>
+                        <a class="product-img--btn" href="product.html">
+                            Chi Tiết Sản Phẩm
+                        </a>
+                    </div>
+                    <div class="product-detail">
+                        <a href="product.html" title="Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402) | Zoe Official">
+                            Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402) | Zoe Official
+                        </a>
+                        <h3>679.000đ</h3>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-img">
+                        <a href="product.html">
+                            <picture class="img-1">
+                                <img src="Images/products/high_top_pink_1_f3d17c71bc1e451e88cf27c3b603a09b_grande.webp" alt="">
+                            </picture>
+                            <picture class="img-2">
+                                <img src="Images/products/high_top_pink_2_40287e5e7c7d4bc2bc32f53e174aca62_grande.webp" alt="" title="Zebra High Zoe Pinkie">
+                            </picture>
+                        </a>
+                        <a class="product-img--btn" href="product.html">
+                            Chi Tiết Sản Phẩm
+                        </a>
+                    </div>
+                    <div class="product-detail">
+                        <a href="product.html" title="Zebra High Zoe Pinkie">
+                            Zebra High Zoe Pinkie
+                        </a>
+                        <h3>1.050.000đ</h3>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-img">
+                        <a href="product.html">
+                            <picture class="img-1">
+                                <img src="Images/products/a_de2bccefbd7c48ae91ce63b27b3c1d1c_grande.webp" alt="">
+                            </picture>
+                            <picture class="img-2">
+                                <img src="Images/products/b_217c6178b9d94a7eb99ac00021f8374e_grande.webp" alt="" title="ZOE Authentic White">
+                            </picture>
+                        </a>
+                        <a class="product-img--btn" href="product.html">
+                            Chi Tiết Sản Phẩm
+                        </a>
+                    </div>
+                    <div class="product-detail">
+                        <a href="product.html" title="ZOE Authentic White">
+                            ZOE Authentic White
+                        </a>
+                        <h3>390.000đ</h3>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-img">
+                        <a href="product.html">
+                            <picture class="img-1">
+                                <img src="Images/products/4_3c756fbcab34414b8740274aec140a00_grande.webp" alt="">
+                            </picture>
+                            <picture class="img-2">
+                                <img src="Images/products/2_23c126b5e69a4d63b6f839166fa20c4e_grande.webp" alt="" title="ZOE Chang'e Flower">
+                            </picture>
+                        </a>
+                        <a class="product-img--btn" href="product.html">
+                            Chi Tiết Sản Phẩm
+                        </a>
+                    </div>
+                    <div class="product-detail">
+                        <a href="product.html" title="ZOE Chang'e Flower">
+                            ZOE Chang'e Flower
+                        </a>
+                        <h3>450.000đ</h3>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-img">
+                        <a href="product.html">
+                            <picture class="img-1">
+                                <img src="Images/products/a_bc07dc06a7d34ad4bd17687444d2a1b1_grande.webp" alt="">
+                            </picture>
+                            <picture class="img-2">
+                                <img src="Images/products/b_320a10c2d06e4c9a8927f04f7eed9d99_grande.webp" alt="" title="Giày Pháp Phục Nâu">
+                            </picture>
+                        </a>
+                        <a class="product-img--btn" href="product.html">
+                            Chi Tiết Sản Phẩm
+                        </a>
+                    </div>
+                    <div class="product-detail">
+                        <a href="product.html" title="Giày Pháp Phục Nâu">
+                            Giày Pháp Phục Nâu
+                        </a>
+                        <h3>470.000đ</h3>
+                    </div>
                 </div>
             </div>
         </div>
