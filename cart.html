@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng của bạn - ZOE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="Images/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <header>
+		<div class="header__logo">
+			<a href="index.html"><img src="Images/logo.webp" alt=""></a>
+		</div>
+		<div class="header__nav">
+            <div class="header__nav--main">
+                <ul>
+                    <li><a href="products.html">THEO STYLE</a></li>
+                    <li><a href="products.html">BÔ SƯU TẬP <i class="fa-solid fa-chevron-down"></i>
+                        <ul class="sub-nav">
+                            <li><a href="products.html">BASIC <i class="fa-solid fa-chevron-right"></i></a>
+                                <ul class="sub-nav--">
+                                    <li><a href="products.html">MULE</a></li>
+                                    <li><a href="products.html">LOW TOP</a></li>
+                                    <li><a href="products.html">HIGH TOP</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html">ESSENTIALS <i class="fa-solid fa-chevron-right"></i></a>
+                                <ul class="sub-nav--">
+                                    <li><a href="products.html">HUXLEY</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html">ART</a></li>
+                            <li><a href="products.html">THỜI TRANG <i class="fa-solid fa-chevron-right"></i></a>
+                                <ul class="sub-nav--">
+                                    <li><a href="products.html">VALENTINE 2023</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="products.html">SALE</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="products.html">PHỤ KIỆN</a></li>
+                </ul>
+            </div>
+            <div class="search" onclick="stopPropagation()">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="search-inp" id="search-inp">
+                    <input type="text" name="" id="" placeholder=" Tìm kiếm sản phẩm...">
+                </div>
+                <script>
+                    const searchBtn = document.querySelector('.search-btn')
+                    const searchInp = document.querySelector('.search-inp')
+                    const hide_Inp = document.querySelector('body')
+                    function toggleBtn(){
+                        document.getElementById("search-inp").classList.toggle("open")
+                    }
+                    searchBtn.addEventListener('click', toggleBtn)
+                    function stopPropagation(){
+                        event.stopPropagation()
+                    }
+                    function hideSearchInp(){
+                        searchInp.classList.remove('open')
+                    }
+                    hide_Inp.addEventListener('click', hideSearchInp)
+                </script>
+            </div>
+            <div class="user"><a href="register.html"><i class="fa-regular fa-user"></i></a></div>
+            <div class="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
+		</div>
+    </header>
+    <div class="content">
+        <h1>Giỏ hàng của bạn</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="image">
+                        <a href="product.html">
+                            <img src="Images/products/c68dedbb-6df3-40f6-b600-df57ff012da2_4970aa1f0a6a4e1c9a181594348b3a4b_grande.webp" alt="">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="product.html">
+                            Giày Thể thao Trái tim ZOE (Giày Sneaker trái tim Love Killer - LT1402) | Zoe Official
+                        </a>
+                        <p>35 / Be</p>
+                    </td>
+                    <td id="price">679.000đ</td>
+                    <td class="qty-inp">
+                        <input type="button" value="-" onclick="quantity(-1); updatePrice(-679000)" style="cursor: pointer">
+                        <input type="text" value="1" id="totalClicks">
+                        <input type="button" value="+" onclick="quantity(+1); updatePrice(679000)" style="cursor: pointer">
+                    </td>
+                    <td id="total-price">679.000đ</td>
+                    <td><i style="cursor: pointer" class="fa-solid fa-xmark"></i></td>
+                    <script>
+                        const VND = new Intl.NumberFormat('vi-VN', {style: 'currency', currency: 'VND'})
+                        const price = document.getElementById("price")
+                        const totalPrice = document.getElementById("total-price")
+                        const totalClicks = document.getElementById("totalClicks")
+                        function quantity(value) {
+                            totalClicks.value = parseInt(totalClicks.value) + value
+                            if(totalClicks.value < 1)
+                                totalClicks.value = 1
+                            totalPrice.innerText = VND.format(parseFloat(price.innerText) * 1000 * totalClicks.value)
+                        }
+                    </script>
+                </tr>
+                <tr>
+                    <td class="image">
+                        <a href="product.html">
+                            <img src="Images/products/4_3c756fbcab34414b8740274aec140a00_grande.webp" alt="">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="product.html">
+                            Zoe Chang'e Flower/SK002
+                        </a>
+                        <p>35</p>
+                    </td>
+                    <td id="price2">450.000đ</td>
+                    <td class="qty-inp">
+                        <input type="button" value="-" onclick="quantity2(-1); updatePrice(-450000)" style="cursor: pointer">
+                        <input type="text" value="1" id="totalClicks2">
+                        <input type="button" value="+" onclick="quantity2(+1); updatePrice(450000)" style="cursor: pointer">
+                    </td>
+                    <td id="total-price2">450.000đ</td>
+                    <td><i style="cursor: pointer" class="fa-solid fa-xmark"></i></td>
+                    <script>
+                        const totalClicks2 = document.getElementById("totalClicks2")
+                        const price2 = document.getElementById("price2")
+                        const totalPrice2 = document.getElementById("total-price2")
+                        function quantity2(value) {
+                            totalClicks2.value = parseInt(totalClicks2.value) + value
+                            if(totalClicks2.value < 1)
+                                totalClicks2.value = 1
+                            totalPrice2.innerText = VND.format(parseFloat(price2.innerText) * 1000 * totalClicks2.value)
+                        }
+                    </script>
+                </tr>
+            </tbody>
+        </table>
+        <div class="order">
+            <div class="order-note">
+                <h3>Ghi chú đơn hàng</h3>
+                <textarea name="" id="" cols="80" rows="5" placeholder="Ghi chú"></textarea>
+            </div>
+            <div class="order-box">
+                <h3>Thông tin đơn hàng</h3>
+                <p>Tổng tiền <b style="font-size: 24px" id="total">1.129.000đ</b></p><br>
+                <p>Phí vận chuyển sẽ được tính ở trang thanh toán.<br>
+                    Bạn cũng có thể nhập mã giảm giá ở trang thanh toán.
+                </p>
+                <p class="button">Thanh toán</p><br>
+                <a href="products.html"><i class="fa-solid fa-arrow-left"></i> Tiếp tục mua hàng</a>
+            </div>
+            <script>
+                const total = document.getElementById("total")    
+                function updatePrice(value){
+                    total.innerText=VND.format(parseFloat(total.innerText)*1000000 + value)
+                    if(parseFloat(total.innerText) >= 10 ){
+                        total.innerText=VND.format(1129000)
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    <footer>
+        <div class="footer__top">
+            <div class="footer__top--logo">
+                <a href="index.html"><img src="Images/logo.webp" alt=""></a>
+            </div>
+            <div class="footer__top--contact">
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="https://goo.gl/maps/F7sJvA3aCJf6zi326">ZOE - Sneakers & Craft</a>
+                </p>
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="https://goo.gl/maps/F7sJvA3aCJf6zi326">ZOE - Văn phòng</a>
+                </p>
+            </div>
+            <div class="footer__top--contact">
+                <p><i class="fa-solid fa-phone"></i> Điện thoại: 0969434712</p>
+            </div>
+            <div class="footer__top--contact">
+                <p><i class="fa-solid fa-envelope"></i> Email: thanhven16@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__bottom--payment">
+                <img src="Images/footer_payment_img.webp" alt="" usemap="#workmap">
+                <map name="workmap">
+                    <area shape="circle" coords="0,20,50" href="https://www.facebook.com" alt="">
+                    <area shape="circle" coords="50,20,50" href="https://www.tiktok.com" alt="">
+                    <area shape="circle" coords="100,20,50" href="https://www.instagram.com" alt="">
+                </map>
+            </div>
+            <ul class="footer__bottom--menu">
+                <li><a href="">Giới thiệu</a></li>
+                <li><a href="">Hướng dẫn mua hàng</a></li>
+                <li><a href="">Chính sách giao nhận</a></li>
+                <li><a href="">Hình thức thanh toán</a></li>
+                <li><a href="">Chính sách Bảo hành - Đổi trả</a></li>
+                <li><a href="">Chính sách bảo mật</a></li>
+            </ul>
+            <div class="footer__bottom--wrap">
+                <p>Powered by Vẹn Không Ngu</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

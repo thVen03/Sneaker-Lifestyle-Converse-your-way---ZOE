@@ -1,6 +1,6 @@
 .content{
     text-align: center;
-    margin-top: 100px;
+    margin: 50px 0;
 }
 .main-content{
     margin: auto;
@@ -25,8 +25,12 @@
     border: none;
     cursor: pointer;
 }
-.main-content a{
-    color: black;
-    display: block;
+.back-to-home{
     text-align: left;
+}
+.back-to-home a{
+    color: black;
+}
+.back-to-home a:hover{
+    color: brown;
 }

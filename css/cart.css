@@ -1,0 +1,67 @@
+.content img{
+    width: 100%;
+}
+.content h1{
+    font-weight: 500;
+    text-align: center;
+}
+.content h1::after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: black;
+    margin: 20px auto;
+    text-align: center;
+}
+.content a{
+    color: black;
+}
+table{
+    width: 100%;
+    text-align: left;
+}
+th{
+    padding: 20px;
+}
+.qty-inp input{
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    border-radius: 0;
+}
+.image{
+    width: 100px;
+}
+td{
+    padding: 0 20px;
+    vertical-align: top;
+    max-width: 204px;
+    border-bottom:1px solid #ededed;
+}
+.order{
+    display: flex;
+    padding: 50px;
+}
+.order h3{
+    font-weight: 500;
+    font-size: 20px;
+}
+.order-note textarea{
+    padding: 20px;
+    background-color: #ededed;
+    outline: none;
+    border: none;
+}
+.order-box{
+    margin: auto;
+}
+.button{
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    margin: 15px 0;
+}
+.order-box a:hover{
+    color: brown;
+}
