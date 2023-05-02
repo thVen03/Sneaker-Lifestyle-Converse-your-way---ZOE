@@ -100,9 +100,9 @@
                     </td>
                     <td id="price">679.000đ</td>
                     <td class="qty-inp">
-                        <input type="button" value="-" onclick="quantity(-1); updatePrice(-679000)" style="cursor: pointer">
+                        <input type="button" value="-" onclick="quantity(-1); updatePrice()" style="cursor: pointer">
                         <input type="text" value="1" id="totalClicks">
-                        <input type="button" value="+" onclick="quantity(+1); updatePrice(679000)" style="cursor: pointer">
+                        <input type="button" value="+" onclick="quantity(+1); updatePrice()" style="cursor: pointer">
                     </td>
                     <td id="total-price">679.000đ</td>
                     <td><i style="cursor: pointer" class="fa-solid fa-xmark"></i></td>
@@ -133,9 +133,9 @@
                     </td>
                     <td id="price2">450.000đ</td>
                     <td class="qty-inp">
-                        <input type="button" value="-" onclick="quantity2(-1); updatePrice(-450000)" style="cursor: pointer">
+                        <input type="button" value="-" onclick="quantity2(-1); updatePrice()" style="cursor: pointer">
                         <input type="text" value="1" id="totalClicks2">
-                        <input type="button" value="+" onclick="quantity2(+1); updatePrice(450000)" style="cursor: pointer">
+                        <input type="button" value="+" onclick="quantity2(+1); updatePrice()" style="cursor: pointer">
                     </td>
                     <td id="total-price2">450.000đ</td>
                     <td><i style="cursor: pointer" class="fa-solid fa-xmark"></i></td>
@@ -169,11 +169,8 @@
             </div>
             <script>
                 const total = document.getElementById("total")    
-                function updatePrice(value){
-                    total.innerText=VND.format(parseFloat(total.innerText)*1000000 + value)
-                    if(parseFloat(total.innerText) >= 10 ){
-                        total.innerText=VND.format(1129000)
-                    }
+                function updatePrice(){
+                    total.innerText=VND.format((parseFloat(price.innerText)*totalClicks.value + parseFloat(price2.innerText)*totalClicks2.value) * 1000)    
                 }
             </script>
         </div>
@@ -210,12 +207,12 @@
                 </map>
             </div>
             <ul class="footer__bottom--menu">
-                <li><a href="">Giới thiệu</a></li>
-                <li><a href="">Hướng dẫn mua hàng</a></li>
-                <li><a href="">Chính sách giao nhận</a></li>
-                <li><a href="">Hình thức thanh toán</a></li>
-                <li><a href="">Chính sách Bảo hành - Đổi trả</a></li>
-                <li><a href="">Chính sách bảo mật</a></li>
+                <li><a href="about_project.html">Giới thiệu</a></li>
+                <li><a href="#">Hướng dẫn mua hàng</a></li>
+                <li><a href="#">Chính sách giao nhận</a></li>
+                <li><a href="#">Hình thức thanh toán</a></li>
+                <li><a href="#">Chính sách Bảo hành - Đổi trả</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
             </ul>
             <div class="footer__bottom--wrap">
                 <p>Powered by Vẹn Không Ngu</p>
