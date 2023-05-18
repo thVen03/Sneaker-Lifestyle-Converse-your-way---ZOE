@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="Images/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <header>
+        <span class="toggle-bar"><i class="fa-solid fa-bars"></i></span>
 		<div class="header__logo">
 			<a href="index.html"><img src="Images/logo.webp" alt=""></a>
 		</div>
 		<div class="header__nav">
             <div class="header__nav--main">
-                <ul>
+                <ul id="PC">
                     <li><a href="products.html">THEO STYLE</a></li>
-                    <li><a href="products.html">BÔ SƯU TẬP <i class="fa-solid fa-chevron-down"></i>
+                    <li class="collectionPC"><a href="products.html">BÔ SƯU TẬP <i class="fa-solid fa-chevron-down"></i>
                         <ul class="sub-nav">
                             <li><a href="products.html">BASIC <i class="fa-solid fa-chevron-right"></i></a>
                                 <ul class="sub-nav--">
@@ -43,6 +45,27 @@
                     </li>
                     <li><a href="products.html">PHỤ KIỆN</a></li>
                 </ul>
+                <ul id="Mobile">
+                    <li><a href="products.html">THEO STYLE</a></li>
+                    <li class="collection"><button><span>BÔ SƯU TẬP</span> <i class="fa-solid fa-chevron-down"></i></button>
+                        <ul class="sub-nav">
+                            <li><a href="products.html">BASIC</a></li>
+                            <li><a href="products.html">ESSENTIALS</li>
+                            <li><a href="products.html">ART</a></li>
+                            <li><a href="products.html">THỜI TRANG</li>
+                            <li><a href="products.html">SALE</a></li>
+                        </ul>
+                        <script>
+                            const btnColl=document.querySelector(".collection")
+                            function btnCollection(){
+                                document.querySelector(".collection .sub-nav").classList.toggle("open")
+                            }
+                            btnColl.addEventListener('click', btnCollection)
+                        </script>
+                    </li>
+                    <li><a href="products.html">PHỤ KIỆN</a></li>
+                </ul>
+                <span class="toggle-bar"><i class="fa-solid fa-xmark"></i></span>
             </div>
             <div class="search" onclick="stopPropagation()">
                 <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -69,10 +92,20 @@
             <div class="user"><a href="register.html"><i class="fa-regular fa-user"></i></a></div>
             <div class="cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
 		</div>
+        <script>
+            const toggleBars=document.querySelectorAll(".toggle-bar")
+            function toggleBarBtn(){
+                document.querySelector(".header__nav--main").classList.toggle("Bar")
+            }
+            for(const toggleBar of toggleBars){
+                toggleBar.addEventListener('click', toggleBarBtn)
+            }
+        </script>
     </header>
     <div class="home">
         <div class="home-slider-image">
-            <a href="products.html"><img src="Images/home_slider_image_1.webp" alt=""></a>
+            <a href="products.html"><img class="img1" src="Images/home_slider_image_1.webp" alt=""></a>
+            <a href="products.html"><img class="img2" src="Images/home_slider_image_4responsive_mb.webp" alt=""></a>
         </div>
         <div class="home-two-banner">
             <div class="banner">
@@ -221,9 +254,9 @@
             <div class="footer__bottom--payment">
                 <img src="Images/footer_payment_img.webp" alt="" usemap="#workmap">
                 <map name="workmap">
-                    <area shape="circle" coords="0,20,50" href="https://www.facebook.com" alt="">
-                    <area shape="circle" coords="50,20,50" href="https://www.tiktok.com" alt="">
-                    <area shape="circle" coords="100,20,50" href="https://www.instagram.com" alt="">
+                    <area shape="circle" coords="0,25,60" href="https://www.facebook.com" alt="">
+                    <area shape="circle" coords="60,25,60" href="https://www.tiktok.com" alt="">
+                    <area shape="circle" coords="120,25,60" href="https://www.instagram.com" alt="">
                 </map>
             </div>
             <ul class="footer__bottom--menu">
