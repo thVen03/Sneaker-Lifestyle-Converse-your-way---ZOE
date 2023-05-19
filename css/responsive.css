@@ -320,9 +320,6 @@
             border: none;
             float: left;
         }
-        .name-item{
-            max-width: 175px;
-        }
         .name-item a{
             overflow: hidden;
             -webkit-line-clamp: 1;
