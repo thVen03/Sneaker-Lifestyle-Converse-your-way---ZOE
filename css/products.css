@@ -1,4 +1,4 @@
-.content{
+.content-products-page{
     padding: 60px;
 }
 .content__main{
@@ -15,6 +15,9 @@ h1, h2{
     font-weight: 300;
     height: 50px;
     line-height: 50px;
+}
+.group-filter ul{
+    margin-left: 10px;
 }
 .group-filter input{
     width: 20px;

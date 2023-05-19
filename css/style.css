@@ -95,38 +95,42 @@ ul{
 .sub-nav > li:hover > ul{
     display: block;
 }
-.search{
-    position: relative;
-    z-index: 44;
-}
 .search button{
     color: white;
     background-color: black;
     border: none;
     cursor: pointer;
 }
-.search-inp{
-    position: absolute;
-    width: 300px;
-    height: 65px;
+.input{
+    padding: 15px;
     background-color: rgba(255, 255, 255, 0.7);
-    top: 48px;
-    right: 0;
     border-radius: 3px;
+    position: absolute;
+    top: 74px;
+    left: 740px;
+    box-shadow: 0 0 5px 0 rgba(102, 102, 102, 0.4);
     display: none;
-    box-shadow: 0 0 3px rgb(35, 34, 34, 0.5);
+}
+.input input{
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    width: 260px;
+    height: 32px;
+    opacity: 0.7;
+    padding: 10px;
+}
+#fa-magnifying-glass{
+    position: absolute;
+    top: 16px;
+    right: 24px;
+}
+#fa-magnifying-glass i{
+    font-size: 16px;
+    opacity: 0.7;
 }
 .open{
-    display: block !important;
-}
-.search-inp input{
     display: block;
-    width: 250px;
-    height: 35px;
-    border: none;
-    outline: none;
-    border-radius: 3px;
-    margin: 15px 25px;
 }
 .home{
     text-align: center;

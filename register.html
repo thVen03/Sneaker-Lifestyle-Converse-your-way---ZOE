@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tạo tài khoản - ZOE</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="Images/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header>
+    <header onclick="stopPropagation()">
         <span class="toggle-bar"><i class="fa-solid fa-bars"></i></span>
 		<div class="header__logo">
 			<a href="index.html"><img src="Images/logo.webp" alt=""></a>
 		</div>
 		<div class="header__nav">
             <div class="header__nav--main">
-                <ul>
+                <ul id="PC">
                     <li><a href="products.html">THEO STYLE</a></li>
-                    <li><a href="products.html">BÔ SƯU TẬP <i class="fa-solid fa-chevron-down"></i>
+                    <li class="collectionPC"><a href="products.html">BÔ SƯU TẬP <i class="fa-solid fa-chevron-down"></i>
                         <ul class="sub-nav">
                             <li><a href="products.html">BASIC <i class="fa-solid fa-chevron-right"></i></a>
                                 <ul class="sub-nav--">
@@ -46,44 +46,59 @@
                     </li>
                     <li><a href="products.html">PHỤ KIỆN</a></li>
                 </ul>
-                <span class="toggle-bar"><i class="fa-solid fa-xmark"></i></span>
+                <ul id="Mobile">
+                    <li><a href="products.html">THEO STYLE</a></li>
+                    <li class="collection"><button><span>BÔ SƯU TẬP</span> <i class="fa-solid fa-chevron-down"></i></button>
+                        <ul class="sub-nav">
+                            <li><a href="products.html">BASIC</a></li>
+                            <li><a href="products.html">ESSENTIALS</li>
+                            <li><a href="products.html">ART</a></li>
+                            <li><a href="products.html">THỜI TRANG</li>
+                            <li><a href="products.html">SALE</a></li>
+                        </ul>
+                        <script>
+                            const btnColl=document.querySelector(".collection")
+                            function btnCollection(){
+                                document.querySelector(".collection .sub-nav").classList.toggle("sub-nav--open")
+                            }
+                            btnColl.addEventListener('click', btnCollection)
+                        </script>
+                    </li>
+                    <li><a href="products.html">PHỤ KIỆN</a></li>
+                </ul>
             </div>
-            <div class="search" onclick="stopPropagation()">
-                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <div class="search-inp" id="search-inp">
-                    <input type="text" name="" id="" placeholder=" Tìm kiếm sản phẩm...">
-                </div>
-                <script>
-                    const searchBtn = document.querySelector('.search-btn')
-                    const searchInp = document.querySelector('.search-inp')
-                    const hide_Inp = document.querySelector('body')
-                    function toggleBtn(){
-                        document.getElementById("search-inp").classList.toggle("open")
-                    }
-                    searchBtn.addEventListener('click', toggleBtn)
-                    function stopPropagation(){
-                        event.stopPropagation()
-                    }
-                    function hideSearchInp(){
-                        searchInp.classList.remove('open')
-                    }
-                    hide_Inp.addEventListener('click', hideSearchInp)
-                </script>
+            <div class="search"><button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button></div>
+            <div class="input">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <span id="fa-magnifying-glass"><i class="fa-solid fa-magnifying-glass"></i></span>
             </div>
+            <script>
+                const searchBtn = document.querySelector(".search")
+                function toggleBtn(){
+                    document.querySelector(".input").classList.toggle("open")
+                }
+                searchBtn.addEventListener('click', toggleBtn)
+                const hide_Inp = document.querySelector("body")
+                hide_Inp.addEventListener('click', function(){
+                    document.querySelector(".input").classList.remove("open")
+                })
+            </script>
             <div class="user"><a href="register.html"><i class="fa-regular fa-user"></i></a></div>
             <div class="cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
 		</div>
         <script>
-            const toggleBars=document.querySelectorAll(".toggle-bar")
+            const toggleBar=document.querySelector(".toggle-bar")
             function toggleBarBtn(){
                 document.querySelector(".header__nav--main").classList.toggle("Bar")
             }
-            for(const toggleBar of toggleBars){
-                toggleBar.addEventListener('click', toggleBarBtn)
-            }
+            toggleBar.addEventListener('click', toggleBarBtn)
+            const hideBar = document.querySelector("body")
+            hideBar.addEventListener('click', function(){
+                document.querySelector(".header__nav--main").classList.remove("Bar")
+            })                
         </script>
     </header>
-    <div class="content">
+    <div class="content-register-page">
         <h2 style="font-weight: lighter;">ĐĂNG KÝ</h2>
         <div class="main-content">
             <input type="text" name="" id="" placeholder="Họ">
@@ -140,5 +155,10 @@
             </div>
         </div>
     </footer>
+    <script>
+        function stopPropagation(){
+            event.stopPropagation()
+        }
+    </script>
 </body>
 </html>
