@@ -126,6 +126,9 @@
             width: 100%;
         }
     /* cart page */
+    td{
+        border: none;
+    }
         .order{
             padding: 0;
             display: block;
@@ -314,6 +317,7 @@
             display: none;
         }
         td{
+            border: none;
             float: left;
         }
         .name-item{
