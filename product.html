@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header onclick="stopPropagation()">
-        <span class="toggle-bar"><i class="fa-solid fa-bars"></i></span>
+    <header>
+        <a class="toggle-bar" onclick="toggleBar()"><i class="fa-solid fa-bars"></i></a>
 		<div class="header__logo">
 			<a href="index.html"><img src="Images/logo.webp" alt=""></a>
 		</div>
-		<div class="header__nav">
+		<div class="header__nav" onclick="stopPropagation()">
             <div class="header__nav--main">
                 <ul id="PC">
                     <li><a href="products.html">THEO STYLE</a></li>
@@ -48,7 +48,7 @@
                 </ul>
                 <ul id="Mobile">
                     <li><a href="products.html">THEO STYLE</a></li>
-                    <li class="collection"><button><span>BÔ SƯU TẬP</span> <i class="fa-solid fa-chevron-down"></i></button>
+                    <li class="collection" onclick="toggleCollecion()"><button><span>BÔ SƯU TẬP</span> <i class="fa-solid fa-chevron-down"></i></button>
                         <ul class="sub-nav">
                             <li><a href="products.html">BASIC</a></li>
                             <li><a href="products.html">ESSENTIALS</li>
@@ -56,47 +56,19 @@
                             <li><a href="products.html">THỜI TRANG</li>
                             <li><a href="products.html">SALE</a></li>
                         </ul>
-                        <script>
-                            const btnColl=document.querySelector(".collection")
-                            function btnCollection(){
-                                document.querySelector(".collection .sub-nav").classList.toggle("sub-nav--open")
-                            }
-                            btnColl.addEventListener('click', btnCollection)
-                        </script>
                     </li>
                     <li><a href="products.html">PHỤ KIỆN</a></li>
+                    <p class="toggle-bar" onclick="toggleBar()"><i class="fa-solid fa-xmark"></i></p>
                 </ul>
             </div>
-            <div class="search"><button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button></div>
+            <div class="search" onclick="toggleSearch()"><button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button></div>
             <div class="input">
                 <input type="text" placeholder="Tìm kiếm sản phẩm...">
                 <span id="fa-magnifying-glass"><i class="fa-solid fa-magnifying-glass"></i></span>
             </div>
-            <script>
-                const searchBtn = document.querySelector(".search")
-                function toggleBtn(){
-                    document.querySelector(".input").classList.toggle("open")
-                }
-                searchBtn.addEventListener('click', toggleBtn)
-                const hide_Inp = document.querySelector("body")
-                hide_Inp.addEventListener('click', function(){
-                    document.querySelector(".input").classList.remove("open")
-                })
-            </script>
             <div class="user"><a href="register.html"><i class="fa-regular fa-user"></i></a></div>
             <div class="cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
 		</div>
-        <script>
-            const toggleBar=document.querySelector(".toggle-bar")
-            function toggleBarBtn(){
-                document.querySelector(".header__nav--main").classList.toggle("Bar")
-            }
-            toggleBar.addEventListener('click', toggleBarBtn)
-            const hideBar = document.querySelector("body")
-            hideBar.addEventListener('click', function(){
-                document.querySelector(".header__nav--main").classList.remove("Bar")
-            })                
-        </script>
     </header>
     <div class="content">
         <div class="content__top">
@@ -108,28 +80,7 @@
                     <li class="border-img"><img src="Images/products/3d25496a-4f62-46b4-a078-2539a4de9fd0_e32e62c9047649d9948b7be515135c6d_grande.webp" alt=""></li>
                     <li><img src="Images/products/c68dedbb-6df3-40f6-b600-df57ff012da2_4970aa1f0a6a4e1c9a181594348b3a4b_grande.webp" alt=""></li>
                     <li><img src="Images/products/3c99cdb8-2f0b-4893-9cab-93cdf96eb48e_dbf5bb6e7bad4d6bbc4c7ea353165dea_master.webp" alt=""></li>
-                    <script>
-                        const list_li = document.querySelectorAll('.list-img li')
-                        for(const li of list_li){
-                            li.addEventListener('click', function(){
-                                for(const li of list_li){
-                                    li.classList.remove('border-img')
-                                }
-                                li.classList.add('border-img')
-                            })
-                        }
-                    </script>
                 </ul>
-                <script>
-                    const picture = document.querySelector('picture img')
-                    const images = document.querySelectorAll('.list-img img')
-                    for(const image of images){
-                        image.addEventListener('click', showImg)
-                        function showImg(){
-                            picture.src=image.src;
-                        }
-                    }
-                </script>
             </div>
             <div class="content__top--right">
                 <h1>Giày Thể thao Trái tim ZOE | Zoe Official</h1>
@@ -138,23 +89,11 @@
                     <h4>Kích thước:</h4>
                     <ul>
                         <li class="border-size">35</li>
-                        <li class="">36</li>
-                        <li class="">37</li>
-                        <li class="">38</li>
-                        <li class="">39</li>
-                        <li class="">40</li>
-                        <script>
-                            const list_size = document.querySelectorAll('.product-size li')
-                            for(const size of list_size){
-                                size.addEventListener('click', addBorder)
-                                function addBorder(){
-                                    for(const size of list_size){
-                                        size.classList.remove('border-size')
-                                    }
-                                    size.classList.add('border-size')
-                                }
-                            }
-                        </script>
+                        <li>36</li>
+                        <li>37</li>
+                        <li>38</li>
+                        <li>39</li>
+                        <li>40</li>
                     </ul>
                 </div>
                 <div class="product-color">
@@ -168,14 +107,6 @@
                         <input type="button" value="-" onclick="quantity(-1)" style="cursor: pointer">
                         <input type="text" value="1" id="totalClicks">
                         <input type="button" value="+" onclick="quantity(+1)" style="cursor: pointer"><br><br><br>
-                        <script>
-                            function quantity(value) {
-                                const totalClicks = document.getElementById("totalClicks")
-                                totalClicks.value = parseInt(totalClicks.value) + value
-                                if(totalClicks.value < 1)
-                                    totalClicks.value = 1
-                            }
-                        </script>
                     </div>
                     <a href="#" class="button">
                         Thêm vào giỏ
@@ -380,8 +311,60 @@
         </div>
     </footer>
     <script>
+        function toggleSearch(){
+            document.querySelector(".input").classList.toggle("open")
+        }
+
+        const hide_Inp = document.querySelector("body")
+        hide_Inp.addEventListener('click', function(){
+            document.querySelector(".input").classList.remove("open")
+        })
+        
         function stopPropagation(){
             event.stopPropagation()
+        }
+
+        function toggleBar(){
+            document.querySelector(".header__nav--main").classList.toggle("Bar")
+        }
+
+        function toggleCollecion(){
+            document.querySelector(".collection .sub-nav").classList.toggle("sub-nav--open")
+        }
+
+        const picture = document.querySelector('picture img')
+        const images = document.querySelectorAll('.list-img img')
+        for(const image of images){
+            image.addEventListener('click', function(){
+                picture.src = image.src;
+            })
+        }
+
+        const list_li = document.querySelectorAll('.list-img li')
+        for(const li of list_li){
+            li.addEventListener('click', function(){
+                for(const li of list_li){
+                    li.classList.remove('border-img')
+                }
+                li.classList.add('border-img')
+            })
+        }
+
+        const list_size = document.querySelectorAll('.product-size li')
+        for(const size of list_size){
+            size.addEventListener('click', function(){
+                for(const size of list_size){
+                    size.classList.remove('border-size')
+                }
+                size.classList.add('border-size')
+            })
+        }
+
+        function quantity(value) {
+            const totalClicks = document.getElementById("totalClicks")
+            totalClicks.value = parseInt(totalClicks.value) + value
+            if(totalClicks.value < 1)
+                totalClicks.value = 1
         }
     </script>
 </body>

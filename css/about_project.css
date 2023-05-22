@@ -1,26 +1,31 @@
 .content-about-project{
     padding: 40px;
 }
+
 h3{
     text-align: center;
     color: green;
     margin: 20px 0;
 }
+
 .about-project li{
     list-style: disc;
     font-size: 16px;
     color: #5c5c5c;
 }
+
 .title-inf{
     text-align: left;
     padding-top: 20px;
     color: #5c5c5c;
     border-top: 1px solid #5c5c5c;
 }
+
 .about-me{
     display: inline-block;
     padding-right: 40px;
 }
+
 .about-me li{
     list-style-type: none;
 }

@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header onclick="stopPropagation()">
-        <span class="toggle-bar"><i class="fa-solid fa-bars"></i></span>
+    <header>
+        <a class="toggle-bar" onclick="toggleBar()"><i class="fa-solid fa-bars"></i></a>
 		<div class="header__logo">
 			<a href="index.html"><img src="Images/logo.webp" alt=""></a>
 		</div>
-		<div class="header__nav">
+		<div class="header__nav" onclick="stopPropagation()">
             <div class="header__nav--main">
                 <ul id="PC">
                     <li><a href="products.html">THEO STYLE</a></li>
@@ -47,7 +47,7 @@
                 </ul>
                 <ul id="Mobile">
                     <li><a href="products.html">THEO STYLE</a></li>
-                    <li class="collection"><button><span>BÔ SƯU TẬP</span> <i class="fa-solid fa-chevron-down"></i></button>
+                    <li class="collection" onclick="toggleCollecion()"><button><span>BÔ SƯU TẬP</span> <i class="fa-solid fa-chevron-down"></i></button>
                         <ul class="sub-nav">
                             <li><a href="products.html">BASIC</a></li>
                             <li><a href="products.html">ESSENTIALS</li>
@@ -55,52 +55,35 @@
                             <li><a href="products.html">THỜI TRANG</li>
                             <li><a href="products.html">SALE</a></li>
                         </ul>
-                        <script>
-                            const btnColl=document.querySelector(".collection")
-                            function btnCollection(){
-                                document.querySelector(".collection .sub-nav").classList.toggle("sub-nav--open")
-                            }
-                            btnColl.addEventListener('click', btnCollection)
-                        </script>
                     </li>
                     <li><a href="products.html">PHỤ KIỆN</a></li>
+                    <p class="toggle-bar" onclick="toggleBar()"><i class="fa-solid fa-xmark"></i></p>
                 </ul>
             </div>
-            <div class="search"><button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button></div>
+            <div class="search" onclick="toggleSearch()"><button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button></div>
             <div class="input">
                 <input type="text" placeholder="Tìm kiếm sản phẩm...">
                 <span id="fa-magnifying-glass"><i class="fa-solid fa-magnifying-glass"></i></span>
             </div>
-            <script>
-                const searchBtn = document.querySelector(".search")
-                function toggleBtn(){
-                    document.querySelector(".input").classList.toggle("open")
-                }
-                searchBtn.addEventListener('click', toggleBtn)
-                const hide_Inp = document.querySelector("body")
-                hide_Inp.addEventListener('click', function(){
-                    document.querySelector(".input").classList.remove("open")
-                })
-            </script>
             <div class="user"><a href="register.html"><i class="fa-regular fa-user"></i></a></div>
             <div class="cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
 		</div>
-        <script>
-            const toggleBar=document.querySelector(".toggle-bar")
-            function toggleBarBtn(){
-                document.querySelector(".header__nav--main").classList.toggle("Bar")
-            }
-            toggleBar.addEventListener('click', toggleBarBtn)
-            const hideBar = document.querySelector("body")
-            hideBar.addEventListener('click', function(){
-                document.querySelector(".header__nav--main").classList.remove("Bar")
-            })                
-        </script>
     </header>
-    <div class="home">
-        <div class="home-slider-image">
-            <a href="products.html"><img class="img1" src="Images/home_slider_image_1.webp" alt=""></a>
-            <a href="products.html"><img class="img2" src="Images/home_slider_image_4responsive_mb.webp" alt=""></a>
+    <main>
+        <div class="home-slider-image pc">
+            <div class="sliderShow">
+                <a href="products.html"><img src="Images/home_slider/home_slider_image_1.webp" alt=""></a>
+                <a href="products.html"><img src="Images/home_slider/home_slider_image_2.webp" alt=""></a>
+                <a href="products.html"><img src="Images/home_slider/home_slider_image_3.webp" alt=""></a>
+                <p class="prev" onclick="plusSlides(-1)">&#10094;</p>
+                <p class="next" onclick="plusSlides(+1)">&#10095;</p>
+            </div>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <div class="home-slider-image mobile">
+            <a href="products.html"><img src="Images/home_slider/home_slider_image_4responsive_mb.webp" alt=""></a>
         </div>
         <div class="home-two-banner">
             <div class="banner">
@@ -222,7 +205,7 @@
                 <a href="products.html" class="button">Xem tất cả</a>
             </div>
         </div>
-    </div>
+    </main>
     <footer>
         <div class="footer__top">
             <div class="footer__top--logo">
@@ -268,8 +251,52 @@
         </div>
     </footer>
     <script>
+        function toggleSearch(){
+            document.querySelector(".input").classList.toggle("open")
+        }
+
+        const hide_Inp = document.querySelector("body")
+        hide_Inp.addEventListener('click', function(){
+            document.querySelector(".input").classList.remove("open")
+        })
+        
         function stopPropagation(){
             event.stopPropagation()
+        }
+
+        function toggleBar(){
+            document.querySelector(".header__nav--main").classList.toggle("Bar")
+        }
+
+        function toggleCollecion(){
+            document.querySelector(".collection .sub-nav").classList.toggle("sub-nav--open")
+        }
+        
+        let slideIndex = 1
+        showSlides(slideIndex)
+        
+        function plusSlides(n) {
+            showSlides(slideIndex += n)
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n)
+        }
+
+        function showSlides(n) {
+            let i 
+            const slides = document.querySelectorAll(".sliderShow a")
+            const dots = document.getElementsByClassName("dot")
+            if (n > slides.length)
+                slideIndex = 1
+            if (n < 1)
+                slideIndex = slides.length
+            for (i = 0; i < slides.length; i++)
+                slides[i].style.display = "none"
+            for (i = 0; i < dots.length; i++)
+                dots[i].className = dots[i].className.replace("active", "")
+            slides[slideIndex-1].style.display = "block"
+            dots[slideIndex-1].className += " active"
         }
     </script>
 </body>
