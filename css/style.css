@@ -132,8 +132,8 @@ ul{
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 3px;
     position: absolute;
-    top: 74px;
-    left: 740px;
+    top: 90%;
+    right: 10%;
     box-shadow: 0 0 5px 0 rgba(102, 102, 102, 0.4);
     display: none;
 }
